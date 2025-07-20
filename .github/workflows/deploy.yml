@@ -32,6 +32,6 @@ jobs:
         script: |
           docker stop devops-app || true
           docker rm devops-app || true
-          docker pull ${{ secrets.DOCKER_USERNAME }}/nodeapp-app:latest
-          docker run -d -p 3000:3000 --name devops-app ${{ secrets.DOCKER_USERNAME }}/nodeapp-app:latest
+#          docker pull ${{ secrets.DOCKER_USERNAME }}/nodeapp-app:latest
+          docker run -d -v /home/ubuntu/nodeapp-logs:/app/logs -p 3000:3000 --name devops-app ${{ secrets.DOCKER_USERNAME }}/nodeapp-app:latest
 
