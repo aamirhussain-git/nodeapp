@@ -24,7 +24,7 @@ console.error = function (msg) {
   process.stderr.write(`[ERROR] ${msg}\n`);
 };
 
-console.log("App started from pipeline");
+console.log("App started  pipeline");
 
 app.get("/", (req, res) =>
 {
