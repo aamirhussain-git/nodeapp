@@ -1,5 +1,5 @@
 const express = require("express");
-const app = express();
+oconst app = express();
 
 const fs = require('fs');
 const path = require('path');
@@ -26,7 +26,11 @@ console.error = function (msg) {
 
 console.log("App started");
 
-app.get("/", (req, res) => res.send("Hello from Github Action!"));
+app.get("/", (req, res) =>
+{
+console.log("Home route accessed"),
+ res.send("Hello from Github Action!")
+});
 
 app.listen(port, () => console.log(`App running on port ${port}`));
 
