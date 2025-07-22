@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 const port = process.env.PORT || 3000;
-// Dummy Text for git push
+
 // Ensure log directory exists
 const logDir = '/app/logs';
 if (!fs.existsSync(logDir)) {
